@@ -1,8 +1,12 @@
 <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Rails Stripe Membership Saas" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Bean & Ground" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails Stripe Membership Saas" %>">
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
@@ -10,26 +14,21 @@
     <%= yield(:head) %>
   </head>
   <body class="<%= controller_name %> <%= action_name %>">
-    <div class="navbar navbar-fixed-top">
-      <nav class="navbar-inner">
-        <div class="container">
-          <%= render 'layouts/navigation' %>
-        </div>
-      </nav>
-    </div>
+
+    <%= render 'layouts/navigation' %>
+
+      <%= render 'layouts/messages' %>
+      <%= yield %>
     <div id="main" role="main">
-      <div class="container">
-        <div class="content">
-           <div class="row">
-            <div class="span12">
-              <%= render 'layouts/messages' %>
-              <%= yield %>
-            </div>
-          </div>
-          <footer>
-          </footer>
-        </div>
-      </div> <!--! end of .container -->
     </div> <!--! end of #main -->
+
+  <!-- Google Analytics Script -->
+  <script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+
   </body>
 </html>

@@ -1,0 +1,70 @@
+// Signin Styles //
+
+/* Ideas for Signin styles
+- standard no fuss login box
+- lock & key
+- calculator
+- a note book
+- coffee cup
+-
+
+
+*/
+
+.signin {
+  .ticket {
+    position: relative;
+    margin-bottom: 10px;
+    article {
+      background: url(../coffee3.jpg) no-repeat center center;
+      background-size: cover;
+      padding: 0.9375em;
+      // border: 8px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 5px #000;
+    }
+  }
+  .ticket-a {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    .row {
+      margin: 0;
+    }
+    article {
+      padding-top: 28px;
+      padding-left: 42px;
+      padding-right: 0;
+      background-color: #fcf7f0;
+      background: url(../signin_admitone_big.png) no-repeat center center;
+      background-size: cover;
+      height: 200px;
+      width: 490px;
+      margin: 0 auto;
+      // temp //
+      //outline: 1px dashed rbga(255, 255, 255, 0.2);
+
+      .ticket-details {
+        width: 299px;
+        float: left;
+        padding: 4%;
+        // temp //
+        //outline: 1px solid #9b907d;
+      }
+
+      input[type='text'], input[type='password'] {
+        background-color: rgba(255, 255, 255, 0.6);
+        border: none;
+        box-shadow: none;
+      }
+      .ticket-stub {
+        text-align: center;
+        width: 90px;
+        margin-left: 59px;
+        float: left;
+
+        // temp //
+        //outline: 1px solid #9b907d;
+      }
+    }
+  }
+}

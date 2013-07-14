@@ -1,0 +1,91 @@
+// Payment Styles //
+
+.payment {
+  background: url(../bg_twobag.jpg) no-repeat center center;
+  .title {
+    text-align: center;
+    padding: 10px;
+  }
+  .credit-card {
+    min-height: 220px;
+    position: relative;
+    background-color: #fafafa;
+    border: 1px solid rgba(224, 224, 224, 1.0);
+    border-radius: 4px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 1.0);
+    padding: 10px 0 0;
+    header {
+      position: absolute;
+      background-image: none;
+      background-color: rgba(224, 224, 224, 1.0);
+      width: 100%;
+      h3 {
+        margin: 0;
+        float: left;
+        color: rgba(0, 0, 0, 1.0);
+        text-shadow: 0 0 1px rgba(255, 255, 255, 1.0);
+      }
+      img {
+        float: right;
+      }
+      .stripe-image {
+        margin-top: 5px;
+        width: 80px;
+      }
+    }
+    .credit-card-icons {
+      width: 70px;
+    }
+    .credit-card-chip {
+        width: 40px;
+        position: absolute;
+        right: 10px;
+        top: 60px;
+    }
+    .card-number {
+      position: absolute;
+      width: 70%;
+      top: 60px;
+      left: 10px;
+    }
+    .cvc {
+      position: absolute;
+      right: 10px;
+      bottom: 5px;
+      width: 80px;
+    }
+    .expirations {
+      position: absolute;
+      width: 70%;
+      bottom: 5px;
+      left: 10px;
+      input[type="text"] {
+        text-align: center;
+        width: 20%;
+        margin-right: 2%;
+        float: left;
+      }
+    }
+    label {
+      padding: 5px;
+    }
+    input[type="text"] {
+      border-radius: 4px;
+      margin-bottom: 0;
+    }
+    footer {
+      position: absolute;
+      bottom: -80px;
+      width: 100%;
+      .stripe-image {
+        float: left;
+        width: 20%;
+        margin-right: 10%;
+      }
+      .button {
+        float: left;
+        width: 70%;
+      }
+    }
+  }
+}

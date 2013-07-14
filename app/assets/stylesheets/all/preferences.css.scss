@@ -1,0 +1,44 @@
+// Preferences / Products //
+
+.preferences {
+  background: url(../bg_lovely_canvas.jpg) no-repeat center center;
+  background: url(../bg_chemex.jpg) no-repeat center center;
+  .feature-card {
+    border: 0.0rem solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.6rem;
+    text-align: center;
+    ul {
+      margin: 0;
+    }
+    li {
+      padding: 0.6rem;
+    }
+    .title {
+      border-radius: 0.6rem 0.6rem 0 0;
+      background-color: rgba(53, 108, 60, 1.0); // green
+      // background-color: rgba(197, 55, 27, 1.0); // red
+      // background-color: rgba(41, 93, 142, 1.0); // blue
+      // background-color: rgba(243, 144, 31, 1.0); // yellow
+    }
+    .price {
+      background-color: rgba(31, 47, 55, 1.0); // grey
+      color: rgba(255, 255, 255, 1.0);
+    }
+    .bullet-item {
+      background-color: rgba(255, 255, 255, 1.0);
+      color: rgba(31, 47, 55, 1.0); // grey
+      border-bottom: 0.1rem solid rgba(243, 144, 31, 1.0);
+    }
+    .footer {
+      background-color: rgba(255, 255, 255, 1.0);
+      color: rgba(31, 47, 55, 1.0); // grey
+      border-radius: 0 0 0.6rem 0.6rem;
+    }
+    form {
+      margin: 0;
+    }
+    .btn {
+      margin: 0;
+    }
+  }
+}

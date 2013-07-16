@@ -25,11 +25,17 @@
   }
   .features {
     [class*="grid"] {
-      min-height: 10rem;
+      position: relative;
       border-radius: 4px;
-
+      .inner {
+        min-height: 10rem;
+        height: 100%;
+        border-radius: 4px;
+        padding: 0.5rem;
+        background-color: rgba(53, 108, 60, 0.6); // green
+      }
       // temp
-      background-color: rgba(53, 108, 60, 0.4); // green
+        border: 1px solid rgba(255, 255, 255, 0.5);
     }
   }
   .action {

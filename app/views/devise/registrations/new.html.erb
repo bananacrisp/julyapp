@@ -9,34 +9,45 @@
       <article class="grid-3">
         <div class="inner">
         <section class="row">
-            <h3>step 1: create your account</h3>
-            <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'card_form form-vertical' }) do |f| %>
+          <h3>step 1: create your account</h3>
+          <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'card_form form-vertical' }) do |f| %>
 
-              <!--h3><%= params[:plan].titleize if params[:plan] %> Subscription Plan</h3-->
+            <!--h3><%= params[:plan].titleize if params[:plan] %> Subscription Plan</h3-->
 
-              <%= hidden_field_tag 'plan', params[:plan] %>
-              <%= f.error_notification %>
-              <%= display_base_errors resource %>
-            <article class="grid-3">
-              <%= f.input :name, :autofocus => true, :placeholder => 'name' %>
-              <%= f.input :email, :required => true, :placeholder => 'email address' %>
-            </article>
-            <article class="grid-3">
-            <%= f.input :password, :required => true, :placeholder => 'password' %>
-            <%= f.input :password_confirmation, :required => true, :placeholder => 'password confirmation' %>
-            </article>
-          </section>
+            <%= hidden_field_tag 'plan', params[:plan] %>
+            <%= f.error_notification %>
+            <%= display_base_errors resource %>
+          <article class="grid-3">
+            <%= f.input :name, :autofocus => true, :placeholder => 'name' %>
+            <%= f.input :email, :required => true, :placeholder => 'email address' %>
+          </article>
+          <article class="grid-3">
+          <%= f.input :password, :required => true, :placeholder => 'password' %>
+          <%= f.input :password_confirmation, :required => true, :placeholder => 'password confirmation' %>
+          </article>
+        </section>
+        <section class='row'>
+          <h3>step 2: where should we send the coffee?</h3>
+          <article class="grid-3">
+            <%= f.input :address_1, :required => true, :placholder => 'address 1' %>
+            <%= f.input :address_1, :required => true, :placholder => 'address 2' %>
+          </article>
+          <article class="grid-3">
+            <%= f.input :town, :required => true, :placholder => 'town' %>
+            <%= f.input :postcode, :required => true, :placholder => 'postcode' %>
+          </article>
+        </section>
           </div>
       </article>
 
       <article class="grid-3">
         <div class="inner">
-          <h3>step 2: some payment details</h3>
+          <h3>step 3: some payment details</h3>
         <aside id="stripe_error" class="alert alert-error" style="display:none" >
         </aside>
         <section class="row">
           <% if @user.stripe_token %>
-            <p>Credit card acceptance is pending.</p>
+            <p>Credit card acceptance is pending (tip: check step 1 and 2).</p>
           <% else %>
           <article class="grid-3">
             <div class="field">

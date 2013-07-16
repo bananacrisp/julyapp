@@ -15,8 +15,10 @@ class ApplicationController < ActionController::Base
         content_fortnightly_path
       when 'fortnightly_switch'
         content_fortnightly_switch_path
+
       when 'monthly'
-        content_monthly_path
+        edit_user_registration_path
+
       when 'monthly_switch'
         content_monthly_switch_path
       else

@@ -9,28 +9,47 @@
     <article class="row">
       <section class="grid-3 features">
         <article class="row">
-          <section class='grid-6'>
-            <h3>freshly roasted each week</h3>
-            <h3>delivered direct to your door step</h3>
+          <section class='grid-3'>
+            <div class="inner">
+              <h3>step 1</h3>
+              <h2>We source</h2>
+            </div>
+          </section>
+          <section class='grid-3'>
+            <div class="inner">
+              <h3>step 2</h3>
+              <h2>We roast</h2>
+            </div>
           </section>
         </article>
         <article class="row">
           <section class='grid-3'>
             <div class="inner">
-              <h3>two new varieties each month</h3>
+              <h3>step 3</h3>
+              <h2>We Post</h2>
             </div>
           </section>
           <section class='grid-3'>
-            <h3>two 125g bags per pack</h3>
+            <div class="inner">
+              <h3>step 4</h3>
+              <h1>You Brew</h2>
+            </div>
           </section>
         </article>
       </section>
       <section class="grid-3 action">
-        <h1>Great Coffee</h1>
-        <h2>Direct to Your Doorstep</h2>
-        <h2>£7.95</h2>
-        <p>per pack</p>
-        <%= link_to 'Go Brew', new_user_registration_path(:plan => 'monthly'), :class => 'btn btn-large btn-yellow' %>
+        <div class="inner">
+          <h1>Freshly Roasted Coffee</h1>
+          <h2>Direct to Your Doorstep</h2>
+          <h2>When you want</h2>
+          <a href="/users/sign_up?plan=monthly" class="btn-gobrew">
+            <%= image_tag("bg_arrow.png") %>
+          </a>
+          <span class="price-wrapper">
+            <h2><span>only</span>£7.95 <span>per 250g</span></h2>
+          </span>
+          <!-- %= link_to 'Go Brew', new_user_registration_path(:plan => 'monthly'), :class => 'btn-gobrew' %-->
+        </div>
       </section>
     </article>
   </section>

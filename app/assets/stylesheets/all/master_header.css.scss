@@ -1,6 +1,6 @@
 // Master Header //
 
-.home, .content, .registrations, .sessions {
+.home, .content, .registrations, .sessions, .users {
   .master-header {
     z-index: 100;
     padding: 0.65rem;
@@ -8,6 +8,11 @@
   }
 }
 
+.content {
+  .master-header {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
 .home {
   .master-header {
     background-color: rgba(255, 255, 255, 0.0);
@@ -18,29 +23,12 @@
 }
 
 .master-header {
-  z-index: 0;
   position: fixed;
   top: 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 0.6rem;
   img {
     float: left;
     width: 12rem;
-  }
-  .alert {
-    position: fixed;
-    width: 40%;
-    margin: 0 30%;
-    padding: 0.4rem;
-    z-index: 101;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 6px;
-    text-align: center;
-    .close {
-      position: absolute;
-      top: 0.1rem;
-      right: 0.4rem;
-    }
   }
 }

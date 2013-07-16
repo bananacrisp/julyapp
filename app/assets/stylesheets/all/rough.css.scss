@@ -8,8 +8,6 @@ background-color: rgba(243, 144, 31, 1.0); // yellow
 
 */
 
-
-
 // Rough Styles to be moved ASAP //
 
 html, body {
@@ -21,11 +19,16 @@ body {
   // background: url(../bg_twobag.jpg) no-repeat center center;
   background-color: #000;
   h1, h2, h3, h4, p {
-  font-family: georgia;
   margin: 0;
   font-family: 'Landmark Dimensional A', 'Landmark Dimensional B';
   font-weight: 400;
   font-style: normal;
+
+  font-family: 'Landmark Inline A', 'Landmark Inline B';
+  font-weight: 400;
+  font-style: normal;
+
+
   }
   h2 {
     font-size: 1.6rem;
@@ -64,13 +67,58 @@ nav {
 
 // Somethings //
 
-.registrations, .sessions {
+.registrations, .sessions, .users {
   [class*="grid"] {
     position: relative;
-    background-color: rgba(255, 255, 255, 0.8);
   }
 }
 
-[class*="grid"] {
-  padding: 0.5rem;
+.registrations {
+  .forms {
+    [class*="grid"] {
+      padding: 0.25rem;
+      position: relative;
+      .inner {
+        position: relative;
+        min-height: 10rem;
+        height: 100%;
+        padding: 0.5rem;
+        background-color: rgba(255, 255, 255, 0.9); // white
+        background-size: cover;
+        [class*="grid"] {
+          border: none;
+        }
+      }
+      // temp
+        border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+  }
+  #card_month, #card_year {
+  width: 50%;
+  float: left
+  }
 }
+
+.content, .registrations {
+    [class*="grid"] {
+      padding: 0.25rem;
+      position: relative;
+      .inner {
+        position: relative;
+        min-height: 10rem;
+        height: 100%;
+        padding: 0.5rem;
+        background-color: rgba(255, 255, 255, 0.9); // white
+        background-size: cover;
+        [class*="grid"] {
+          border: none;
+        }
+      }
+      // temp
+        border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+}
+
+// [class*="grid"] {
+//   padding: 0.25rem;
+// }

@@ -3,19 +3,22 @@
 <% end %>
 
 
-<div class="background-wrapper signup">
+<div class="background-wrapper">
   <section class="container">
-    <section class="row">
+    <section class="row forms">
       <article class="grid-3">
+        <div class="inner">
         <section class="row">
-            <h2>Sign up here</h2>
+            <h3>step 1: create your account</h3>
             <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'card_form form-vertical' }) do |f| %>
-              <h3><%= params[:plan].titleize if params[:plan] %> Subscription Plan</h3>
+
+              <!--h3><%= params[:plan].titleize if params[:plan] %> Subscription Plan</h3-->
+
               <%= hidden_field_tag 'plan', params[:plan] %>
               <%= f.error_notification %>
               <%= display_base_errors resource %>
             <article class="grid-3">
-              <%= f.input :name, :autofocus => true, :placeholder => 'full name' %>
+              <%= f.input :name, :autofocus => true, :placeholder => 'name' %>
               <%= f.input :email, :required => true, :placeholder => 'email address' %>
             </article>
             <article class="grid-3">
@@ -23,8 +26,12 @@
             <%= f.input :password_confirmation, :required => true, :placeholder => 'password confirmation' %>
             </article>
           </section>
+          </div>
       </article>
-      <article class="grid-2">
+
+      <article class="grid-3">
+        <div class="inner">
+          <h3>step 2: some payment details</h3>
         <aside id="stripe_error" class="alert alert-error" style="display:none" >
         </aside>
         <section class="row">
@@ -45,24 +52,24 @@
           </article>
         </section>
         <section class="row">
-          <article class="grid-3">
+          <article class="grid-4">
             <div class="field">
               <%= label_tag :card_month, "Card Expiration" %>
               <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"}%>
               <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+10}, {name: nil, id: "card_year"}%>
             </div>
           </article>
-          <article class="grid-3">
+          <article class="grid-2">
             <div class="field">
-              <%= f.input :coupon, :label => 'Promotional Coupon (if any)', :placeholder => 'promo coupon' %>
+              <%= f.input :coupon, :placeholder => 'promo coupon' %>
             </div>
           </article>
           <% end %>
         </section>
           <%= f.hidden_field :stripe_token %>
-          <%= f.button :submit, 'Sign up', :class => 'btn-primary' %>
+          <%= f.button :submit, 'Join the club', :class => 'btn btn-yellow' %>
         <% end %>
-
+        </div>
       </article>
     </section>
   </section>

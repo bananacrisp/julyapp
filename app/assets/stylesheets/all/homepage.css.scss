@@ -1,6 +1,6 @@
 // Background Wrapper Styles //
 
-.home, .content, .registrations, .sessions {
+.home, .content, .registrations, .sessions, .users {
   .background-wrapper {
     background: url(/assets/bg_square.jpg) no-repeat center center;
     // background: url(../bg_twobag_reverse.jpg) no-repeat center left;
@@ -12,6 +12,17 @@
       width: 70%;
       margin: 0 15%;
     }
+    .btn-gobrew {
+    img {
+      margin-top: 2rem;
+    }
+  }
+  }
+}
+
+.content {
+  .background-wrapper {
+    background: url(/assets/bg_twobag.jpg) no-repeat center center;
   }
 }
 
@@ -25,23 +36,39 @@
   }
   .features {
     [class*="grid"] {
+      padding: 0.25rem;
       position: relative;
-      border-radius: 4px;
       .inner {
+        position: relative;
         min-height: 10rem;
         height: 100%;
-        border-radius: 4px;
         padding: 0.5rem;
         background-color: rgba(53, 108, 60, 0.6); // green
+        background: url(/assets/bg_paper_blue.jpg) no-repeat center center;
+        background-size: cover;
       }
       // temp
         border: 1px solid rgba(255, 255, 255, 0.5);
     }
   }
   .action {
-    border-radius: 4px;
-
+    padding: 0.25rem;
+    .inner {
+      position: relative;
+      height: 100%;
+      min-height: 21.7rem;
+      padding: 0.5rem;
+      background-color: rgba(255, 255, 255, 0.4); //white
+    }
     // temp
-    background-color: rgba(255, 255, 255, 0.4); //white
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+}
+
+.price-wrapper {
+  span {
+    padding: 0 0.5rem;
+    font-size: 0.6rem;
+    line-height: 0.8rem;
   }
 }

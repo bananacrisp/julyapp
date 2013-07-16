@@ -9,15 +9,19 @@ class ApplicationController < ActionController::Base
     case current_user.roles.first.name
       when 'admin'
         users_path
-      when 'silver'
-        content_silver_path
-      when 'gold'
-        content_gold_path
-      when 'platinum'
-        content_platinum_path
+      when 'weekly'
+        content_weekly_path
+      when 'fortnightly'
+        content_fortnightly_path
+      when 'fortnightly_switch'
+        content_fortnightly_switch_path
+      when 'monthly'
+        content_monthly_path
+      when 'monthly_switch'
+        content_monthly_switch_path
       else
         root_path
     end
   end
-  
+
 end

@@ -1,15 +1,15 @@
 class ContentController < ApplicationController
   before_filter :authenticate_user!
-  
-  def silver
-    authorize! :view, :silver, :message => 'Access limited to Silver Plan subscribers.'
-  end
-  
-  def gold
-    authorize! :view, :gold, :message => 'Access limited to Gold Plan subscribers.'
+
+  def weekly
+    authorize! :view, :weekly, :message => 'Access limited to Weekly Plan subscribers.'
   end
 
-  def platinum
-    authorize! :view, :platinum, :message => 'Access limited to Platinum Plan subscribers.'
+  def fortnightly
+    authorize! :view, :fortnightly, :message => 'Access limited to Fortnightly Plan subscribers.'
+  end
+
+  def monthly
+    authorize! :view, :monthly, :message => 'Access limited to Monthly Plan subscribers.'
   end
 end

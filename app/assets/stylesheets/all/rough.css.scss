@@ -1,3 +1,15 @@
+/* Colours //
+
+
+background-color: rgba(41, 93, 142, 1.0); //blue
+background-color: rgba(53, 108, 60, 1.0); // green
+background-color: rgba(243, 144, 31, 1.0); // yellow
+
+
+*/
+
+
+
 // Rough Styles to be moved ASAP //
 
 html, body {
@@ -7,6 +19,7 @@ html, body {
 
 body {
   // background: url(../bg_twobag.jpg) no-repeat center center;
+  background-color: #000;
   h1, h2, h3, h4, p {
   font-family: georgia;
   margin: 0;
@@ -43,6 +56,21 @@ nav {
 }
 
 // All //
-.homepage, .preferences, .signup, .payment, .account-page {
-  padding-top: 4.0rem;
+.home {
+  .container {
+    padding-top: 1rem;
+  }
+}
+
+// Somethings //
+
+.registrations, .sessions {
+  [class*="grid"] {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+[class*="grid"] {
+  padding: 0.5rem;
 }

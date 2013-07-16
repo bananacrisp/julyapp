@@ -9,16 +9,17 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
  *= require all/kraken
  *= require all/master_header
  *= require all/master_nav
  *= require all/homepage
  *= require all/preferences
- *= require all/signup
  *= require members/signin
  *= require members/payment
  *= require members/payment_card
  *= require members/accountpage
  *= require all/rough
+ *= require all/alert
 */
+
+

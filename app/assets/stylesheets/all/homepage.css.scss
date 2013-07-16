@@ -1,15 +1,41 @@
-// Homepage Styles //
+// Background Wrapper Styles //
 
-.homepage {
-  background: url(../bg_weatherton.jpg) no-repeat center center;
-  header {
-    background-color: rgba(255, 255, 255, 0.0)
+.home, .content, .registrations, .sessions {
+  .background-wrapper {
+    background: url(../bg_square.jpg) no-repeat center center;
+    // background: url(../bg_twobag_reverse.jpg) no-repeat center left;
+    background-size: cover;
+    header {
+      background-color: rgba(255, 255, 255, 0.0);
+    }
+    img {
+      width: 70%;
+      margin: 0 15%;
+    }
   }
-  .hero {
+}
+
+.home {
+  .background-wrapper {
+    color: rgba(255, 255, 255, 1.0);
+  }
+  [class*="row"] {
     text-align: center;
+    margin-bottom: 1rem;
+  }
+  .features {
+    [class*="grid"] {
+      min-height: 10rem;
+      border-radius: 4px;
+
+      // temp
+      background-color: rgba(53, 108, 60, 0.4); // green
+    }
+  }
+  .action {
     border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 0.8rem;
-    // temp //
+
+    // temp
+    background-color: rgba(255, 255, 255, 0.4); //white
   }
 }

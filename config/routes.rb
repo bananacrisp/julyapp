@@ -1,8 +1,8 @@
 RailsStripeMembershipSaas::Application.routes.draw do
   mount StripeEvent::Engine => '/stripe'
-  get "content/gold"
-  get "content/silver"
-  get "content/platinum"
+  get "content/weekly"
+  get "content/fortnightly"
+  get "content/monthly"
   authenticated :user do
     root :to => 'home#index'
   end

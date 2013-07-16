@@ -9,6 +9,7 @@ group :assets do
 end
 gem 'jquery-rails'
 gem 'bootstrap-sass'
+gem 'krakenrails'
 gem 'cancan'
 gem 'devise'
 gem 'figaro'

@@ -118,6 +118,8 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.0)
+    krakenrails (0.0.6)
+      railties (>= 3.1.1)
     launchy (2.3.0)
       addressable (~> 2.3)
     listen (1.2.2)
@@ -254,6 +256,7 @@ DEPENDENCIES
   guard-rspec
   hub
   jquery-rails
+  krakenrails
   launchy
   quiet_assets
   rails (= 3.2.13)

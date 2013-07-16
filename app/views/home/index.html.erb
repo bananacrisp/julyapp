@@ -1,17 +1,45 @@
-<div class="background-wrapper homepage">
+<div class="background-wrapper">
   <header></header>
   <section class="container">
     <article class="row">
-      <section class="grid-3 hero">
-        <%= link_to image_tag("bg_logo_compact.svg")%>
-        <h1>Freshly Roasted Coffee.</h1>
+      <section class="grid-2 offset-2">
+        <%= link_to image_tag("bg_logo_compact.png")%>
+      </section>
+    </article>
+    <article class="row">
+      <section class="grid-3 features">
+        <article class="row">
+          <section class='grid-6'>
+            <h3>freshly roasted each week</h3>
+            <h3>delivered direct to your door step</h3>
+          </section>
+        </article>
+        <article class="row">
+          <section class='grid-3'>
+            <h3>two new varieties each month</h3>
+          </section>
+          <section class='grid-3'>
+            <h3>two 125g bags per pack</h3>
+          </section>
+        </article>
+      </section>
+      <section class="grid-3 action">
+        <h1>Great Coffee</h1>
         <h2>Direct to Your Doorstep</h2>
-        <h2>£7.45</h2>
+        <h2>£7.95</h2>
         <p>per pack</p>
-        <%= link_to 'Silver', new_user_registration_path(:plan => 'silver'), :class => 'btn btn-primary' %>
-        <%= link_to 'Gold', new_user_registration_path(:plan => 'gold'), :class => 'btn btn-primary' %>
-        <%= link_to 'Platinum', new_user_registration_path(:plan => 'platinum'), :class => 'btn btn-primary' %>
+        <%= link_to 'Go Brew', new_user_registration_path(:plan => 'monthly'), :class => 'btn btn-large btn-yellow' %>
       </section>
     </article>
   </section>
 </div>
+
+<!--
+
+      <%= link_to 'Daily', new_user_registration_path(:plan => 'daily'), :class => 'btn btn-primary' %>
+        <%= link_to 'Weekly', new_user_registration_path(:plan => 'weekly'), :class => 'btn btn-primary' %>
+        <%= link_to 'Fortnightly', new_user_registration_path(:plan => 'fortnightly'), :class => 'btn btn-primary' %>
+        <%= link_to 'Testing Silver', new_user_registration_path(:plan => 'silver'), :class => 'btn btn-primary' %>
+
+
+-->

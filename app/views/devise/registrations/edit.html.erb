@@ -3,26 +3,47 @@
 <% end %>
 
 <div class="background-wrapper">
+  <header></header>
   <section class="container">
     <section class="row postcard">
-      <article class="grid-4">
+      <article class="grid-3">
       <h2>Account</h2>
-      <div id="stripe_error" class="alert alert-error" style="display:none" ></div>
-      <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => 'form-vertical' }) do |f| %>
-        <%= f.error_notification %>
-        <%= display_base_errors resource %>
-        <%= f.input :name, :autofocus => true %>
-        <%= f.input :email, :required => true %>
-        <%= f.input :password, :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :required => false %>
-        <%= f.input :password_confirmation, :required => false %>
-        <%= f.input :current_password, :hint => "we need your current password to confirm your changes", :required => true %>
-        <%= f.button :submit, 'Update', :class => 'btn-primary' %>
+      <section class="row">
+        <div id="stripe_error" class="alert alert-error" style="display:none" ></div>
+        <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => 'form-vertical' }) do |f| %>
+          <%= f.error_notification %>
+          <%= display_base_errors resource %>
+          <article class="grid-3">
+          <%= f.input :name, :autofocus => true %>
+          </article>
+          <article class="grid-3">
+          <%= f.input :email, :required => true %>
+          </article>
+      </section>
+      <section class="row">
+        <article class="grid-3">
+          <%= f.input :password, :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :required => false %>
+        </article>
+        <article class="grid-3">
+          <%= f.input :password_confirmation, :required => false %>
+        </article>
+      </section>
+      <section class="row">
+        <article class="grid-3">
+          <%= f.input :current_password, :hint => "we need your current password to confirm your changes", :required => true %>
+        </article>
+        <article class="grid-3">
+          <h3>Hello</h3>
+          <%= f.button :submit, 'Update', :class => 'btn-primary' %>
+        </article>
+      </section>
       <% end %>
-
-      <h3>Subscription Plan</h3>
+    </article>
+    <article class="grid-3">
+      <h2>Subscription Plan</h2>
       <p>
         <%= @user.roles.first.name.titleize %>
-        <a data-toggle="modal" href="#plan-options" class="btn btn-mini" type="button">Change plan</a>
+        <a data-toggle="modal" href="#plan-options" class="btn btn-mini" type="button">Update your plan</a>
       </p>
 
       <h3>Card</h3>
@@ -33,13 +54,32 @@
 
       <h3>Cancel my account</h3>
 
-      <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini' %></p>
+      <p>Unhappy? <%= link_to "Close my account", registration_path(resource_name), :data => { :confirm => "Are you sure you want to close your account?" }, :method => :delete, :class => 'btn btn-mini' %></p>
+
+
+      <!-- PLAN OPTIONS MODAL -->
+
+      <!--div id="plan-options" class="modal" style="display: none;">
+        <%= simple_form_for resource, :as => resource_name, :url => update_plan_path, :html => {:method => :put, :class => 'form-horizontal' } do |f| %>
+          <div class="modal-header">
+            <a class="close" data-dismiss="modal">&#215;</a>
+            <h3>Update your Membership</h3>
+          </div>
+          <div class="modal-body">
+            <%= f.input :role_ids, :collection => Role.all.delete_if {|i| i.name == 'admin'}, :as => :radio_buttons, :label_method => lambda {|t| t.name.titleize}, :label => false, :item_wrapper_class => 'inline' %>
+          </div>
+          <div class="modal-footer">
+            <%= f.submit "Change Plan", :class => "btn btn-primary" %>
+            <a class="btn" data-dismiss="modal" href="#">Close</a>
+          </div>
+        <% end %>
+      </div-->
 
       <div id="plan-options" class="modal" style="display: none;">
         <%= simple_form_for resource, :as => resource_name, :url => update_plan_path, :html => {:method => :put, :class => 'form-horizontal' } do |f| %>
           <div class="modal-header">
             <a class="close" data-dismiss="modal">&#215;</a>
-            <h3>Change Plan</h3>
+            <h3>Update your Membership to a weekly?</h3>
           </div>
           <div class="modal-body">
             <%= f.input :role_ids, :collection => Role.all.delete_if {|i| i.name == 'admin'}, :as => :radio_buttons, :label_method => lambda {|t| t.name.titleize}, :label => false, :item_wrapper_class => 'inline' %>
@@ -50,6 +90,9 @@
           </div>
         <% end %>
       </div>
+
+
+      <!-- CARD DETAILS MODAL -->
 
       <div id="card-data" class="modal" style="display: none;">
         <%= simple_form_for resource, :as => resource_name, :url => update_card_path, :html => {:method => :put, :class => 'form-horizontal card_form' } do |f| %>

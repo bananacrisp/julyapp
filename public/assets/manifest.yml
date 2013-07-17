@@ -579,6 +579,8 @@ bespoke/select_arrows_slim.png: bespoke/select_arrows_slim-610f079e300908f8f9c7b
 bespoke/select_arrows_slim/index.png: bespoke/select_arrows_slim-610f079e300908f8f9c7bf17bd4e65e6.png
 bg_arrow.png: bg_arrow-b08120ac30794c3ca6dc4017834da469.png
 bg_arrow/index.png: bg_arrow-b08120ac30794c3ca6dc4017834da469.png
+bg_arrow_2.png: bg_arrow_2-81790e9d3a600f6b1ba199aba96e9eb9.png
+bg_arrow_2/index.png: bg_arrow_2-81790e9d3a600f6b1ba199aba96e9eb9.png
 bg_bluebottle.jpg: bg_bluebottle-7ded3fe51b56950b841beecbec8b6017.jpg
 bg_bluebottle/index.jpg: bg_bluebottle-7ded3fe51b56950b841beecbec8b6017.jpg
 bg_bluebottle2.jpg: bg_bluebottle2-487ff3ee77abcaa622837e20fe10fd07.jpg
@@ -589,6 +591,8 @@ bg_cardboard_recycled.jpg: bg_cardboard_recycled-2f657307eb34f5f03ba5668f945f5cb
 bg_cardboard_recycled/index.jpg: bg_cardboard_recycled-2f657307eb34f5f03ba5668f945f5cb5.jpg
 bg_chemex.jpg: bg_chemex-915e088e168d304e71722e750067cb18.jpg
 bg_chemex/index.jpg: bg_chemex-915e088e168d304e71722e750067cb18.jpg
+bg_forefathers.png: bg_forefathers-bad4a46f4262a335e27c2f7d8baafd0f.png
+bg_forefathers/index.png: bg_forefathers-bad4a46f4262a335e27c2f7d8baafd0f.png
 bg_logo.png: bg_logo-f19ce04dbc777e46465e5ea56d6df468.png
 bg_logo/index.png: bg_logo-f19ce04dbc777e46465e5ea56d6df468.png
 bg_logo.svg: bg_logo-1654492193af580a3a8f1ad462d83f6d.svg
@@ -607,6 +611,10 @@ bg_sign.svg: bg_sign-b3493fd870b35cbfbb50a53ee31d7fa5.svg
 bg_sign/index.svg: bg_sign-b3493fd870b35cbfbb50a53ee31d7fa5.svg
 bg_square.jpg: bg_square-e883b7c7ab75f87abec2bb9713d4fdfd.jpg
 bg_square/index.jpg: bg_square-e883b7c7ab75f87abec2bb9713d4fdfd.jpg
+bg_tonx.jpg: bg_tonx-8bef64c069881c08501868a9b840ba90.jpg
+bg_tonx/index.jpg: bg_tonx-8bef64c069881c08501868a9b840ba90.jpg
+bg_topbg.png: bg_topbg-a0a19f6c2ee9fb2d45d69c40d3ea5858.png
+bg_topbg/index.png: bg_topbg-a0a19f6c2ee9fb2d45d69c40d3ea5858.png
 bg_twobag.jpg: bg_twobag-beb9fa941d77667734780150a814ba5b.jpg
 bg_twobag/index.jpg: bg_twobag-beb9fa941d77667734780150a814ba5b.jpg
 bg_twobag_reverse.jpg: bg_twobag_reverse-0eaad72a8a019527096293b338138b4a.jpg
@@ -655,6 +663,10 @@ handsomecoffee_logo_nocopy.jpg: handsomecoffee_logo_nocopy-62decd685f51622366d15
 handsomecoffee_logo_nocopy/index.jpg: handsomecoffee_logo_nocopy-62decd685f51622366d15ebe8b03249b.jpg
 hipster_mug.png: hipster_mug-25fdeefbc320c9e7bff79192ee3ee63d.png
 hipster_mug/index.png: hipster_mug-25fdeefbc320c9e7bff79192ee3ee63d.png
+icon-beans.png: icon-beans-cb941dd6a528fa9eb872de1b0a4bc44a.png
+icon-beans/index.png: icon-beans-cb941dd6a528fa9eb872de1b0a4bc44a.png
+icon-beans.svg: icon-beans-60672cc83392c04f69fa7336b9ddcd00.svg
+icon-beans/index.svg: icon-beans-60672cc83392c04f69fa7336b9ddcd00.svg
 letter-form-send.jpg: letter-form-send-bbcb2be953c2f63561b955bb9e533255.jpg
 letter-form-send/index.jpg: letter-form-send-bbcb2be953c2f63561b955bb9e533255.jpg
 letter-form-send.png: letter-form-send-5a30a995e4bb8ebc28dded84b9b46f50.png
@@ -681,8 +693,8 @@ squareup_image.jpg: squareup_image-78e817e1daffc8e961043b684027638c.jpg
 squareup_image/index.jpg: squareup_image-78e817e1daffc8e961043b684027638c.jpg
 application.js: application-402133b93d8e7ba73784cdc3200f6528.js
 application/index.js: application-402133b93d8e7ba73784cdc3200f6528.js
-application.css: application-8b802acce3c3274729d5243c93c8b3fa.css
-application/index.css: application-8b802acce3c3274729d5243c93c8b3fa.css
+application.css: application-19a373b4c5c939d419966103fcc76910.css
+application/index.css: application-19a373b4c5c939d419966103fcc76910.css
 veneer-webfont.eot: veneer-webfont-f231d06efecff6704264c1108f639e7f.eot
 veneer-webfont/index.eot: veneer-webfont-f231d06efecff6704264c1108f639e7f.eot
 veneer-webfont.svg: veneer-webfont-9fca249e519c998b9865d4ff512a21fa.svg

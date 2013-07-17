@@ -5,71 +5,78 @@
 <div class="background-wrapper">
   <header></header>
   <section class="container">
-    <section class="row">
-      <article class="grid-3">
+    <section class="row row-holder">
+      <!-- article class="grid-3">
         <div class="inner">
           <h2>Update your <%= @user.roles.first.name.titleize %> subscription to:</h2>
           <p>
-          <!-- a data-toggle="modal" href="#plan-options" class="btn btn-mini" type="button">Update your plan</a-->
+          <a data-toggle="modal" href="#plan-options" class="btn btn-mini" type="button">Update your plan</a>
             <%= simple_form_for resource, :as => resource_name, :url => update_plan_path, :html => {:method => :put, :class => 'form-horizontal' } do |f| %>
               <%= f.input :role_ids, :collection => Role.all.delete_if {|i| i.name == 'admin'}, :as => :radio_buttons, :label_method => lambda {|t| t.name.titleize}, :label => false, :item_wrapper_class => 'inline' %>
               <%= f.submit "Change Plan", :class => "btn btn-primary" %>
           <% end %>
           </p>
         </div>
-      </article>
-      <article class="grid-3">
+      </article-->
+
+
+      <article class="grid-6">
         <div class="inner">
-          <h2>About You <%= @user.name %></h2>
+
+          <h2>About You <%= @user.name %> and your <%= @user.roles.first.name.titleize %> membership</h2>
           <section class="row">
             <div id="stripe_error" class="alert alert-error" style="display:none" ></div>
             <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => 'form-vertical' }) do |f| %>
               <%= f.error_notification %>
               <%= display_base_errors resource %>
               <article class="grid-3">
-              <%= f.input :name, :autofocus => true %>
+                <h3>Account Details</h3>
+                <%= f.input :name, :autofocus => true, label: false, :placeholder => 'Your Name' %>
+                <%= f.input :email, :required => true, label: false, :placeholder => 'Your Email Address' %>
+                <h3>Secure Password</h3>
+                <%= f.input :password, :autocomplete => "off", :required => false, label: false, :placeholder => 'leave it blank if you dont want to change it' %>
+                <%= f.input :password_confirmation, :required => false, label: false, :placeholder => 'Password Confirmation' %>
               </article>
               <article class="grid-3">
-              <%= f.input :email, :required => true %>
-               <%= f.input :address_1, :required => true %>
+                <h3>Delivery Details</h3>
+                <%= f.input :address_1, :required => true, label: false, :placeholder => 'House Name or No.' %>
+                <%= f.input :address_2, :required => true, label: false, :placeholder => 'Street' %>
+                <%= f.input :town, :required => true, label: false, :placeholder => 'Town' %>
+                <%= f.input :postcode, :required => true, label: false, :placeholder => 'Postcode' %>
               </article>
           </section>
           <section class="row">
-            <article class="grid-3">
-              <%= f.input :password, :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :required => false %>
-            </article>
-            <article class="grid-3">
-              <%= f.input :password_confirmation, :required => false %>
-            </article>
-          </section>
-          <section class="row">
-            <article class="grid-3">
-              <%= f.input :current_password, :hint => "we need your current password to confirm your changes", :required => true %>
-            </article>
-            <article class="grid-3">
-              <h3>Hello</h3>
-              <%= f.button :submit, 'Update', :class => 'btn-primary' %>
+            <article class="grid-3 offset-3">
+              <h4>we need your current password to confirm your changes</h4>
+              <%= f.input :current_password, label: false, :placeholder => 'Password', :required => true %>
+              <%= f.button :submit, 'Update', :class => 'btn' %>
             </article>
           </section>
           <% end %>
         </div>
       </article>
     </section>
-    <section class="row">
-      <article class="grid-3">
+    <section class="row row-holder">
+      <article class="grid-4">
         <div class="inner">
           <h3>Update your card (ending in <%= @user.last_4_digits %>)</h3>
-          <p>
-          <!-- a data-toggle="modal" href="#card-data" class="btn btn-mini" type="button">Change card</a-->
-          <%= simple_form_for resource, :as => resource_name, :url => update_card_path, :html => {:method => :put, :class => 'form-horizontal card_form' } do |f| %>
+          <section class="row">
+            <article class="grid-4">
+              <%= simple_form_for resource, :as => resource_name, :url => update_card_path, :html => {:method => :put, :class => 'form-horizontal card_form' } do |f| %>
               <div class="field">
-                <%= label_tag :card_number, "Credit Card Number" %>
-                <%= text_field_tag :card_number, nil, name: nil, :placeholder => 'card number' %>
+                <%= label_tag :card_number, "Payment Card Number" %>
+                <%= text_field_tag :card_number, nil, name: nil, :placeholder => 'long card number' %>
               </div>
+            </article>
+            <article class="grid-2">
               <div class="field">
-                <%= label_tag :card_code, "Card Security Code (CVV)" %>
+                <%= label_tag :card_code, "Card Security Code" %>
                 <%= text_field_tag :card_code, nil, name: nil, :placeholder => '3 digit CVV' %>
               </div>
+            </article>
+          </section>
+          <section class="row">
+            <article class="grid-4">
               <div class="field">
                 <%= label_tag :card_month, "Card Expiration" %>
                 <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"}%>
@@ -78,12 +85,15 @@
               <%= f.hidden_field :name %>
               <%= f.hidden_field :email %>
               <%= f.hidden_field :stripe_token %>
-              <%= f.submit "Change Credit Card", :class => "btn btn-primary" %>
-          <% end %>
-          </p>
+            </article>
+            <article class="grid-2">
+              <%= f.submit "Updated Payment Card", :class => "btn btn-primary" %>
+              <% end %>
+            </article>
+          </section>
         </div>
       </article>
-      <article class="grid-3">
+      <article class="grid-2">
         <div class="inner">
           <p>Unhappy? <%= link_to "Close my account", registration_path(resource_name), :data => { :confirm => "Are you sure you want to close your account?" }, :method => :delete, :class => 'btn btn-mini' %></p>
         </div>

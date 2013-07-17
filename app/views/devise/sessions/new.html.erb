@@ -1,14 +1,16 @@
 <div class="background-wrapper">
   <section class="container">
     <section class="row">
-      <article class="grid-2 offset-2">
+      <article class="grid-2 offset-2 sign-in">
         <div class="inner">
-          <h2>Log in</h2>
+          <h2>Member Sign In</h2>
           <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form-vertical' }) do |f| %>
-            <%= f.input :email, :autofocus => true %>
-            <%= f.input :password %>
-            <%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
-            <%= f.button :submit, "Sign in", :class => 'btn-primary' %>
+            <%= f.input :email, :autofocus => true, label: false, :placeholder => 'Your Email' %>
+            <%= f.input :password, label: false, :placeholder => 'Your Secret Password' %>
+            <%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable?%>
+            <div class="buttonup">
+            <%= f.button :submit, "Sign in", :class => 'btn btn-green' %>
+            </div>
           <% end %>
           <%= render "devise/shared/links" %>
         </div>

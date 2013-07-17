@@ -86,7 +86,7 @@ module RailsStripeMembershipSaas
 
      # Matt Added: Recommended by Heroku at https://devcenter.heroku.com/articles/rails-asset-pipeline#troubleshooting
 
-    config.assets.initialize_on_precompile = false
+    # config.assets.initialize_on_precompile = false
 
 
   end

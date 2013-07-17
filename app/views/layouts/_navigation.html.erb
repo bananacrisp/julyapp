@@ -3,10 +3,13 @@
   <% if user_signed_in? %>
     <%= link_to 'Sign Out', destroy_user_session_path, :method=>'delete', :class=>"btn " %>
   <% else %>
+    <!--
     <%= link_to 'The B&G Team', new_user_session_path, :class => "btn" %>
     <%= link_to 'The Coffee', new_user_session_path, :class => "btn" %>
-    <%= link_to 'FAQs', new_user_session_path, :class => "btn" %>
-    <%= link_to 'Sign In', new_user_session_path, :class=>"btn btn-yellow" %>
+    <%= link_to 'FAQs', new_user_session_path, :class => "btn" %> -->
+    <div class="buttonup">
+    <%= link_to 'Member Sign In', new_user_session_path, :class=>"btn btn-yellow" %>
+    </div>
   <% end %>
   <% if user_signed_in? %>
     <%= link_to 'My Account', edit_user_registration_path, :class=>"btn btn-yellow" %>

@@ -531,10 +531,10 @@ pre code {
     line-height: 1.333333333;
     font-weight: normal;
     background-color: #808080;
-    border: .071428571em solid #808080;
-    border-radius: .235294118em;
-    margin-left: .3em;
-    margin-bottom: .3em;
+    //border: .071428571em solid #808080;
+    //border-radius: .235294118em;
+    //margin-left: .3em;
+    //margin-bottom: .3em;
 }
 
 .btn,
@@ -570,10 +570,9 @@ a .btn-blue:hover {
     border-color: rgba(53, 108, 60, 1.0); // green
 }
 
-.btn-green:hover,
-a .btn-green:hover {
-    background-color: #005580;
-    border-color: #005580;
+.btn-green:hover {
+    background-color: rgba(53, 108, 60, 0.8); // green
+    border-color: rgba(53, 108, 60, 0.8); // green
 }
 
 // btn-yellow //
@@ -582,11 +581,9 @@ a .btn-green:hover {
     background-color: rgba(243, 144, 31, 1.0); // yellow
     border-color: rgba(243, 144, 31, 1.0); // yellow
 }
-
-.btn-green:hover,
-a .btn-green:hover {
-    background-color: #005580;
-    border-color: #005580;
+.btn-yellow:hover {
+    background-color: rgba(243, 144, 31, 0.8); // yellow
+    border-color: rgba(243, 144, 31, 1.0); // yellow
 }
 
 

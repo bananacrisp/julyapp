@@ -44,8 +44,12 @@
         height: 100%;
         padding: 0.5rem;
         background-color: rgba(53, 108, 60, 0.6); // green
-        background: url(/assets/bg_paper_blue.jpg) no-repeat center center;
+        // background: url(/assets/bg_paper_blue.jpg) no-repeat center center;
         background-size: cover;
+        .img {
+          width: 60%;
+          margin: 0 15%;
+        }
       }
       // temp
         border: 1px solid rgba(255, 255, 255, 0.5);

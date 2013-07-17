@@ -1,6 +1,6 @@
 // Background Wrapper Styles //
 
-.home, .content, .registrations, .sessions, .users {
+.home, .content, .registrations, .sessions, .users, .passwords {
   .background-wrapper {
     background: url(/assets/bg_square.jpg) no-repeat center center;
     // background: url(../bg_twobag_reverse.jpg) no-repeat center left;
@@ -26,7 +26,7 @@
   }
 }
 
-.home {
+.home, .sessions, .passwords, .users {
   .background-wrapper {
     color: rgba(255, 255, 255, 1.0);
   }

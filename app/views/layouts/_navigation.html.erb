@@ -9,7 +9,7 @@
     <%= link_to 'Sign In', new_user_session_path, :class=>"btn btn-yellow" %>
   <% end %>
   <% if user_signed_in? %>
-    <%= link_to 'Edit My account', edit_user_registration_path, :class=>"btn btn-yellow" %>
+    <%= link_to 'My Account', edit_user_registration_path, :class=>"btn btn-yellow" %>
     <% if current_user.has_role? :admin %>
       <%= link_to 'Admin', users_path, :class=>"btn" %>
     <% end %>

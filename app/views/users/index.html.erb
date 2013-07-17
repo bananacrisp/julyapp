@@ -3,12 +3,14 @@
   <section class="container">
     <article class="row">
       <section class="grid-6">
-        <h3>Users</h3>
+        <div class="inner">
+          <h3>Users</h3>
           <table class="table table-condensed">
             <thead>
               <tr>
                 <th>Username</th>
                 <th>Email</th>
+                <th>Postcode</th>
                 <th>Registered</th>
                 <th>Role</th>
                 <th>Last 4 Digits</th>
@@ -22,6 +24,7 @@
               <tr>
                 <td><%= link_to user.name, user %></td>
                 <td><%= user.email %></td>
+                <td><%= user.postcode %></td>
                 <td><%= user.created_at.to_date %></td>
                 <td><%= user.roles.first.name.titleize unless user.roles.first.nil? %></td>
                 <td><%= user.last_4_digits.to_s %></td>
@@ -35,6 +38,7 @@
             <% end %>
             </tbody>
           </table>
+        </div>
       </section>
     </article>
   </section>

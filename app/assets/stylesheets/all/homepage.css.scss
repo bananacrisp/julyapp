@@ -76,6 +76,14 @@
   }
 }
 
+.action {
+  h4 {
+    font-family: 'Landmark Regular A', 'Landmark Regular B';
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
 .sessions, .passwords {
   .sign-in, .forgot {
     margin-top: 0.5rem;
@@ -113,6 +121,9 @@
 // Hero //
 
 .hero {
+  header {
+    width: 100%;
+  }
   padding-top: 1rem;
   img {
     width: 40%;
@@ -125,8 +136,9 @@
     font-family: 'Landmark Dimensional A', 'Landmark Dimensional B';
     font-weight: 400;
     font-style: normal;
-    font-size: 3.2rem;
-    line-height: 3.4rem;
+    // font-size: 3.2rem;
+    // line-height: 3.4rem;
+    font: 40px/1 "Landmark Dimensional A", "Landmark Dimensional B";
     padding: 0;
     color: rgba(31, 47, 55, 1.0); // grey
   }

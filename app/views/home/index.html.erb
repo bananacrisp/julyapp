@@ -1,52 +1,15 @@
 <div class="background-wrapper">
   <header></header>
   <section class="container">
-    <!--article class="row">
-      <section class="grid-2">
-        <%= link_to image_tag("bg_logo_compact.png")%>
-      </section>
-    </article-->
     <article class="row">
-      <!--section class="grid-3 features">
-        <article class="row">
-          <section class='grid-3'>
-            <div class="inner">
-              <h3>step 1</h3>
-              <h2>We source</h2>
-              <%= image_tag("icon-beans.svg")%>
-            </div>
-          </section>
-          <section class='grid-3'>
-            <div class="inner">
-              <h3>step 2</h3>
-              <h2>We roast</h2>
-              <%= image_tag("icon-beans.svg")%>
-            </div>
-          </section>
-        </article>
-        <article class="row">
-          <section class='grid-3'>
-            <div class="inner">
-              <h3>step 3</h3>
-              <h2>We Post</h2>
-              <%= image_tag("icon-beans.svg")%>
-            </div>
-          </section>
-          <section class='grid-3'>
-            <div class="inner">
-              <h3>step 4</h3>
-              <h2>You Brew</h2>
-              <%= image_tag("icon-beans.svg")%>
-            </div>
-          </section>
-        </article>
-      </section-->
       <section class="grid-4 hero">
         <%= link_to image_tag("bg_logo_compact.png")%>
-          <h2>Freshly Roasted Coffee</h2>
-          <hr>
-          <h2>Delivered to your door</h2>
-          <h3>~ ready for you to brew ~</h3>
+          <header>
+            <h2 id="fittext1">Freshly Roasted Coffee</h2>
+            <hr>
+            <h2 id="fittext2">Delivered to your door</h2>
+            <h3>~ weekly ~ fortnightly ~ monthly ~</h3>
+          </header>
       </section>
       <section class="grid-2 action">
         <div class="inner">
@@ -67,8 +30,13 @@
         </div>
       </section>
     </article>
-  </section>
+
+  <script type="text/javascript">
+    $("#fittext1").fitText(1.3, { maxFontSize: '55px' });
+    $("#fittext2").fitText(1.4, { maxFontSize: '52px' });
+  </script>
 </div>
+
 
 <!--
 
